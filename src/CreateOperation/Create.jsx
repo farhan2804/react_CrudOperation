@@ -6,7 +6,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 const Create = () => {
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
-  const history = useNavigate();
+  const navigate = useNavigate();
   const setValueName = (event) => {
     setName(event.target.value);
   };
@@ -22,7 +22,7 @@ const Create = () => {
       })
 
       .then(() => {
-        history("/read");
+        navigate("/read");
       });
   };
   return (
